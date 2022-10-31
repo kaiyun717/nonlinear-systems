@@ -1,0 +1,43 @@
+%% EE C222 Homework 02
+%% Problem 1
+
+% Initial Point
+x_0 = [0; 0];
+
+% Iterative Function System (IFS) Array
+ifs_array = [
+0 0.2625 -0.3941 0 8.0172 243.2220 0.2169
+0.1816 0 0 0.1719 68.5607 8.2813 0.0655
+0.1805 0 0 0.1625 69.2141 200.2813 0.0615
+-0.1019 -0.1815 0.3904 -0.0062 375.5494 6.8777 0.1499
+0.0520 -0.2150 0.3916 0 258.0875 6.0841 0.1766
+-0.1163 0 0 -0.2281 321.2090 100.6875 0.0556
+0 0.2346 -0.3928 0 402.9388 242.4908 0.1933
+0.1894 0 0 0.2031 457.9871 8.6875 0.0807];
+
+% Number of functions
+num_func = size(ifs_array, 1);
+
+% Array of probabilities of each function.
+P = transpose(ifs_array(:, end));
+% Array of function indices.
+func_idx_list = 1:num_func;
+
+% Choose initial function index
+func_idx = randsample(func_idx_list, 1, true, P);
+
+% Number of iterations
+num_iter = 100000;
+
+% Dataset of all states throughout the transitions
+x_data = zeros(num_iter, 2);
+
+for i = 1:num_iter
+    M_i = [ifs_array(func_idx, 1) ifs_array(func_idx, 2)
+           ifs_array(func_idx, 3) ifs_array(func_idx, 4)];
+    c_i = [ifs_array(func_idx, 5)
+           ifs_array(func_idx, 6)];
+    
+    x_i = 
+    
+end

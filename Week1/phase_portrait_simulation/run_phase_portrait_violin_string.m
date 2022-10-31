@@ -6,7 +6,7 @@ plant = @plant_violin_string_stiction2;
 % Speed of the belt
 b = 1.0;
 
-% Number of test initial states for the phase portrait.
+% Number of t est initial states for the phase portrait.
 N_init_test = 30;
 % Range of random initial states.
 init_range_x = [-3.0, 6.0];
